@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Proj00 - Template React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto template usando context api, bootstrap, axios e react router dom. O sistema possui uma tela de login e um consumo de API rest.
 
 ## Available Scripts
 
