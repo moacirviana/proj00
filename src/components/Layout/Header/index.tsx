@@ -29,6 +29,13 @@ export default function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
+            <LinkContainer to="/vendas">
+                  <Nav.Link href="#ze">Vendas</Nav.Link>
+              </LinkContainer >
+              
+              <LinkContainer to="/produtos">
+                  <Nav.Link href="#ze">Produtos</Nav.Link>
+              </LinkContainer >
 
                <LinkContainer to="/usuarios">
                   <Nav.Link href="#ze">Usuarios</Nav.Link>
@@ -63,7 +70,7 @@ export default function Header() {
                 </NavDropdown>
             </Nav>
             <Nav>
-            { auth.email ? 
+            { auth.token ? 
                <Nav.Link href="#link" onClick={logout}>Logout</Nav.Link>
              : 
                <LinkContainer to="/login">

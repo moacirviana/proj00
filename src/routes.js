@@ -8,6 +8,9 @@ import TemplatePage from 'Pages/Template';
 import ListarUsuarios from 'Pages/User';
 import { AuthProvider } from 'context/AuthProvider';
 import HomePage from 'Pages/Home';
+import ListarProduto from 'Pages/produtos';
+import ListarVendas from 'Pages/Vendas';
+import GetBeanVenda from 'Pages/Vendas/view';
 
 export default function AppRouter() {
   return (
@@ -24,6 +27,12 @@ export default function AppRouter() {
             <Route path='login' element={<Login />} />
 
             <Route path='usuarios' element={<ListarUsuarios />} />
+
+            <Route path='produtos' element={<ListarProduto />} />
+
+            <Route path='vendas' element={<ListarVendas />} />
+
+            <Route path="vendas/:id" element={<GetBeanVenda />} />
             
           </Route>
           <Route path='*' element={<NotFound />} />

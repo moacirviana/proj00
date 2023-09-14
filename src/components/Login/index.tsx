@@ -39,11 +39,9 @@ function Login () {
   }; 
 
   async function onFinish(values: {email:string, password:string}) {
-
     try {
-      toast.info('Enviando dados para autenticar');
       await auth.authenticate(values.email, values.password);
-      navigate('/tabela');
+      navigate('/vendas');
       //Change history.replace('/path') with navigate('/path', { replace: true })
     } catch (error) {
       toast.error('Ocorreu um erro: ' + error);
